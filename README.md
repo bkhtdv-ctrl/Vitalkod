@@ -32,6 +32,7 @@ A statikus HTML:
 - Mozgás és biomechanika
 - Biokémia, metabolikus folyamatok
 - Tinktúrák, fitoterápia
+- Táplálkozáspszichiátria
 
 ## Jövőbeli tervek
 - részletes témakategóriák bővítése,
