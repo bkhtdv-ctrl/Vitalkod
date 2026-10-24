@@ -1,274 +1,215 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Életmód és egészség · A mindennapi döntések biológiai lenyomata</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Életmód és Egészség – A Mindennapi Döntések Biológiai Lenyomata</title>
+    <meta name="description" content="Az életmód – táplálkozás, sport, alvás és stressz – epigenetikai hatásai: skorbut-tanulság, szarkopénia, cirkadián ritmus és allosztatikus terhelés. PubMed-forrásokkal.">
+    <link rel="canonical" href="https://vitalkod.hu/eletmod.html">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #eef0ed;
+        }
+        h1 {
+            color: #1a5276;
+            border-bottom: 3px solid #48c9b0;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #1e8449;
+            margin-top: 30px;
+            border-left: 5px solid #48c9b0;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #1a5276;
+            margin-top: 20px;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        /* ---- Nagy menürendszer ---- */
+        .menu {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-top: 2px solid #888;
+            border-bottom: 2px solid #888;
+            text-align: center;
+        }
+        .menu a {
+            margin-right: 15px;
+            font-weight: bold;
+            color: #0000EE;
+            text-decoration: none;
+        }
+        .menu a:visited { color: #551A8B; }
+        .menu a:hover { text-decoration: underline; }
+        .menu a.active { color: #1e8449; }
 
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .pubmed-box {
+            background: #ebf5fb;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2980b9;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        .pubmed-box strong { color: #1a5276; }
+        .pubmed-box a { color: #0000EE; }
 
-    /* ---- Menü (a többi aloldalhoz igazítva) ---- */
-    .menu {
-      max-width: 820px;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.3rem 1.2rem;
-      list-style: none;
-      margin-bottom: 1.5rem;
-      padding: 0 0 1rem 0;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .menu a {
-      text-decoration: none;
-      color: #475569;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.2rem 0;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .menu a:hover,
-    .menu a.active {
-      color: #0d9488;
-      border-bottom-color: #0d9488;
-    }
+        .highlight {
+            background-color: #fef9e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .mechanism {
+            background: #ebf5fb;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-left: 5px solid #2980b9;
+            margin: 20px 0;
+        }
+        .mechanism h3 { margin-top: 0; color: #1a5276; }
 
-    .page {
-      max-width: 820px;
-      width: 100%;
-      background: #ffffff;
-      border-radius: 28px;
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.06), 0 4px 12px -4px rgba(0, 0, 0, 0.02);
-      padding: 3rem 2.5rem;
-      border: 1px solid #e2e8f0;
-    }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .comparison-item {
+            background: #eafaf1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 5px solid #27ae60;
+        }
+        .comparison-item strong {
+            display: block;
+            color: #1e8449;
+            margin-bottom: 5px;
+        }
+        .comparison-item span { color: #2c3e50; font-size: 0.95em; }
 
-    header {
-      margin-bottom: 2rem;
-      padding-bottom: 1.2rem;
-      border-bottom: 2px solid #e2e8f0;
-    }
-
-    .site-title {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #0f172a;
-    }
-
-    .subhead {
-      color: #64748b;
-      font-size: 1.05rem;
-      margin-top: 0.4rem;
-    }
-
-    .intro {
-      background: #f0fdfa;
-      border-left: 4px solid #0d9488;
-      padding: 1.3rem 1.6rem;
-      border-radius: 14px;
-      margin: 1.8rem 0 2.2rem;
-      font-size: 0.98rem;
-      color: #134e4a;
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: #0f172a;
-      margin: 2rem 0 0.8rem;
-      padding-bottom: 0.3rem;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    h2 .icon { font-size: 1.2rem; }
-
-    h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #1e293b;
-      margin: 1.2rem 0 0.4rem;
-    }
-
-    p {
-      margin-bottom: 0.9rem;
-      color: #334155;
-      font-size: 0.97rem;
-    }
-
-    .highlight {
-      background: #fef9c3;
-      padding: 0.1rem 0.35rem;
-      border-radius: 6px;
-      font-weight: 500;
-      color: #854d0e;
-    }
-
-    .study-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 1rem 1.3rem;
-      margin: 1rem 0 1.2rem;
-      font-size: 0.9rem;
-      color: #475569;
-    }
-    .study-box strong { color: #0f172a; }
-    .study-box .ref {
-      display: block;
-      margin-top: 0.4rem;
-      font-size: 0.82rem;
-      color: #64748b;
-      font-style: italic;
-    }
-
-    .comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-      margin: 1rem 0;
-    }
-    .comparison-item {
-      background: #f1f5f9;
-      border-radius: 12px;
-      padding: 0.9rem 1.1rem;
-      font-size: 0.9rem;
-    }
-    .comparison-item strong {
-      display: block;
-      color: #0f172a;
-      margin-bottom: 0.25rem;
-      font-size: 0.92rem;
-    }
-    .comparison-item span { color: #475569; }
-
-    .footer-note {
-      margin-top: 2.5rem;
-      padding-top: 1.2rem;
-      border-top: 1px solid #e2e8f0;
-      font-size: 0.82rem;
-      color: #64748b;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      body { padding: 1rem 0.8rem; }
-      .page { padding: 1.8rem 1.2rem; border-radius: 22px; }
-      .site-title { font-size: 1.6rem; }
-      .comparison { grid-template-columns: 1fr; }
-      .menu { gap: 0.2rem 0.8rem; font-size: 0.85rem; }
-    }
-  </style>
+        footer {
+            margin-top: 40px;
+            font-size: 0.85em;
+            text-align: center;
+            color: #95a5a6;
+            border-top: 1px solid #d5dbdb;
+            padding-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .comparison { grid-template-columns: 1fr; }
+            .menu a { margin-right: 10px; font-size: 0.9em; }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigáció -->
-  <nav class="menu" aria-label="Fő navigáció">
-    <a href="/index.html">Home</a>
-    <a href="/prevencio.html">Természetes prevenció</a>
-    <a href="/">Testtudat</a>
-    <a href="/">Anyagcsere</a>
-    <a href="/">Fitoterápia</a>
-    <a href="/taplalkozas.html">Táplálkozás</a>
-    <a href="/">Táplálkozáspszichiátria</a>
-    <a href="https://www.youtube.com/@termeszetamiareszed" target="_blank">YouTube</a>
-  </nav>
 
-  <div class="page">
-    <header>
-      <div class="site-title">Életmód és egészség</div>
-      <div class="subhead">A mindennapi döntések biológiai lenyomata</div>
-    </header>
-
-    <div class="intro">
-      Az életmód – a táplálkozás, a mozgás, az alvás és a stresszkezelés – nem csupán kényelmi kérdés. Ezek a tényezők <strong>epigenetikai mechanizmusokon keresztül</strong> befolyásolják génjeink kifejeződését, ezáltal egészségünket, öregedésünk ütemét és regenerációs képességünket. Az alábbiakban négy szemléletes példán keresztül mutatjuk be, mit mond a tudomány.
+    <!-- Nagy menürendszer -->
+    <div class="menu">
+        <a href="/index.html">Home</a>
+        <a href="/prevencio.html">Természetes prevenció</a>
+        <a href="/">Testtudat</a>
+        <a href="/">Anyagcsere</a>
+        <a href="/">Fitoterápia</a>
+        <a href="/taplalkozas.html">Táplálkozás</a>
+        <a href="/">Táplálkozáspszichiátria</a>
+        <a href="https://www.youtube.com/@termeszetamiareszed" target="_blank">YouTube</a>
     </div>
+
+    <div class="pubmed-box">
+        <strong>Tudományos háttér:</strong>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15834109/" target="_blank" rel="noopener">Sprouse 2005, J Biol Rhythms</a> –
+        cirkadián ritmus és 5-HT7 receptor ;
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15755477/" target="_blank" rel="noopener">Guscott 2005, Neuropharmacology</a> –
+        5-HT7 receptor knockout és cirkadián ritmus .
+    </div>
+
+    <h1>Életmód és Egészség: A Mindennapi Döntések Biológiai Lenyomata</h1>
+
+    <p>Az életmód – a táplálkozás, a mozgás, az alvás és a stresszkezelés – nem csupán kényelmi kérdés. Ezek a tényezők <span class="highlight">epigenetikai mechanizmusokon keresztül</span> befolyásolják génjeink kifejeződését, ezáltal egészségünket, öregedésünk ütemét és regenerációs képességünket. Az alábbiakban négy szemléletes példán keresztül mutatjuk be, mit mond a tudomány.</p>
 
     <h2>Táplálkozás: a C-vitamin és a skorbut tanulsága</h2>
-    <p>Miért betegedtek meg az európai hajósok, míg az eszkimó inuit törzs tagjai nem. Az ember nem képes a C-vitamin előállítására, az inuit törzsek tagjai sem. Ennek ellenére mégis látható ez a különbség. Mi az oka? A hosszú tengeri utakra induló európai hajósok étrendje energiadús volt (sózott hús, kétszersült, hüvelyesek), mégis tömegesen betegedtek meg skorbutban. Ezzel szemben a hagyományos inuit étrend (friss, nyers, vagy fagyasztott belsőségeket, halikrát és tengeri algákat is tartalmazott). Mind a két esetben a C-vitamin források korlátozottak voltak. Azonban míg az inuit törzsek emberei nem szenvedtek skorbutban, addig a matrózok igen. A különbség nem az állati vs. növényi eredetben rejlett, hanem a <span class="highlight">feldolgozásban és a választott élelmiszerekben</span>: nyers VS feldolgozott. A nyersben elérhető és megmaradt a vitamin, ami beépült, míg a feldolgozott élelmiszer az átalakítás folyamán bizonyos értékes tápanyagait elveszítette. A táplálkozás, az étel felhasználás volt a döntő ebben a kérdésben.</p>
+    <p>Miért betegedtek meg az európai hajósok, míg az eszkimó inuit törzs tagjai nem? Az ember nem képes a C-vitamin előállítására, az inuit törzsek tagjai sem. Ennek ellenére mégis látható ez a különbség. Mi az oka? A hosszú tengeri utakra induló európai hajósok étrendje energiadús volt (sózott hús, kétszersült, hüvelyesek), mégis tömegesen betegedtek meg skorbutban. Ezzel szemben a hagyományos inuit étrend friss, nyers vagy fagyasztott belsőségeket, halikrát és tengeri algákat is tartalmazott. Mindkét esetben a C-vitamin-források korlátozottak voltak – mégis csak a matrózok betegedtek meg. A különbség nem az állati vs. növényi eredetben rejlett, hanem a <span class="highlight">feldolgozásban és a választott élelmiszerekben</span>: nyers vs. feldolgozott. A nyersben elérhető és megmaradt a vitamin, míg a feldolgozott élelmiszer az átalakítás során értékes tápanyagait elveszítette. A táplálkozás, az étel felhasználás módja volt a döntő.</p>
 
     <div class="comparison">
-      <div class="comparison-item">
-        <strong>Hajósok</strong>
-        <span>Sózott hús, kétszersült, hosszú tárolás → C-vitamin-bevitel kritikusan alacsony</span>
-      </div>
-      <div class="comparison-item">
-        <strong>Inuitok</strong>
-        <span>Friss/fagyasztott belsőségek, halikra, tengeri algák → mérhető C-vitamin-bevitel</span>
-      </div>
+        <div class="comparison-item">
+            <strong>Hajósok</strong>
+            <span>Sózott hús, kétszersült, hosszú tárolás → C-vitamin-bevitel kritikusan alacsony</span>
+        </div>
+        <div class="comparison-item">
+            <strong>Inuitok</strong>
+            <span>Friss/fagyasztott belsőségek, halikra, tengeri algák → mérhető C-vitamin-bevitel</span>
+        </div>
     </div>
 
-    <div class="study-box">
-      <strong>Kutatási háttér:</strong> Egy 2021-es újraelemzés az 1936–1937-es kelet-grönlandi adatok alapján a hagyományos inuit étrendből származó becsült napi C-vitamin-bevitelt férfiaknál 79 mg, nőknél 59 mg medián értékben állapította meg. A szerzők szerint a tengeri algák fogyasztása jelentős szerepet játszott az ellátottságban.
-      <span class="ref">Mullie, P., Deliens, T., & Clarys, P. (2021). International Journal of Circumpolar Health.</span>
+    <div class="pubmed-box">
+        <strong>Kutatási háttér:</strong> Egy 2021-es újraelemzés az 1936–1937-es kelet-grönlandi adatok alapján a hagyományos inuit étrendből származó becsült napi C-vitamin-bevitelt férfiaknál 79 mg, nőknél 59 mg medián értékben állapította meg. A szerzők szerint a tengeri algák fogyasztása jelentős szerepet játszott az ellátottságban.
+        <br><a href="https://pubmed.ncbi.nlm.nih.gov/34809636/" target="_blank" rel="noopener">Mullie, P., Deliens, T., &amp; Clarys, P. (2021). International Journal of Circumpolar Health.</a>
     </div>
     <p>A tanulság: <strong>az energiabevitel nem azonos a tápanyag-ellátottsággal.</strong></p>
 
     <h2>Sport: a mozgás és a leépülés tanulsága</h2>
-    <p>A rendszeres fizikai aktivitás nem csupán a szív- és érrendszerre hat jótékonyan. Miért élnek tovább az okinavai és a Szardíniai hegyi falvak lakói, míg más emberek esetében az életkor jóval alacsonyabb marad? <span class="highlight">mozgás és közösség, szociális érzelmi kapcsolatok.</span> Az izomtömeg időskori csökkenése (szarkopénia) biológiai valóság. Mégis van olyan csoport, ahol ez a folyamat lassabban zajlik. A tipikus nyugati, autófüggő, liftes életmódban a napi mozgás elkerülhető, vagy túlintenzíven végezhető. A másik oldalon olyan közösségek állnak, ahol a környezet és a hagyományos rutin kényszeríti (és lehetővé teszi) a folyamatos, mérsékelt aktivitást – anélkül, hogy bárki „sportolna”. Az aktív életmód nem feltétlen elegendő, szükséges hozzá a támogatói szociális közösség is, amely a nyugati társadalomban nincs jelen. A különbség nem egyéni akaraterőben van, hanem a hely és a közösségi szokások szintjén. Ahol a mozgás beépül a mindennapokba (lejtős utca, kert, pásztorkodás, járás a boltba és a rokonokhoz), ott idős korban is fennmarad. Ahol a környezet lehetővé teszi az ülést, a leépülés gyorsabb.</p>
+    <p>A rendszeres fizikai aktivitás nem csupán a szív- és érrendszerre hat jótékonyan. Miért élnek tovább az okinavai és a szardíniai hegyi falvak lakói, míg más emberek esetében az életkor jóval alacsonyabb marad? <span class="highlight">Mozgás és közösség, szociális-érzelmi kapcsolatok.</span> Az izomtömeg időskori csökkenése (szarkopénia) biológiai valóság. Mégis van olyan csoport, ahol ez a folyamat lassabban zajlik. A tipikus nyugati, autófüggő, liftes életmódban a napi mozgás elkerülhető vagy túlintenzíven végezhető. A másik oldalon olyan közösségek állnak, ahol a környezet és a hagyományos rutin kényszeríti (és lehetővé teszi) a folyamatos, mérsékelt aktivitást – anélkül, hogy bárki „sportolna”. Az aktív életmód nem feltétlenül elegendő: szükséges hozzá a támogató szociális közösség is, amely a nyugati társadalomban sokszor nincs jelen. A különbség nem egyéni akaraterőben van, hanem a hely és a közösségi szokások szintjén. Ahol a mozgás beépül a mindennapokba (lejtős utca, kert, pásztorkodás, járás a boltba és a rokonokhoz), ott idős korban is fennmarad. Ahol a környezet lehetővé teszi az ülést, a leépülés gyorsabb.</p>
 
     <div class="comparison">
-      <div class="comparison-item">
-        <strong>nyugati társadalom</strong>
-        <span>Szociális háló és a természetes, mozgásra alkalmas környezet hiánya</span>
-      </div>
-      <div class="comparison-item">
-        <strong>okinavai, bolotanai emberek</strong>
-        <span>Közösség ami támogatja egymást és lehetővé teszi a mindennapi mozgás megőrzését</span>
-      </div>
+        <div class="comparison-item">
+            <strong>Nyugati társadalom</strong>
+            <span>Szociális háló és a természetes, mozgásra alkalmas környezet hiánya</span>
+        </div>
+        <div class="comparison-item">
+            <strong>Okinavai, bolotanai emberek</strong>
+            <span>Közösség, amely támogatja egymást és lehetővé teszi a mindennapi mozgás megőrzését</span>
+        </div>
     </div>
 
-    <div class="study-box">
-      <strong>Kutatási háttér:</strong> Egy 2026-os demográfiai elemzés a szardíniai Bolotana hegyi falujában azt találta, hogy a 70 éves nők esetében a 100 éves kor elérésének valószínűsége 13,8%, szemben az olaszországi ~3,5%-kal. A kutatók a meredek terepen végzett napi gyaloglást a hosszú élet egyik fontos környezeti tényezőjének tekintik. <br> Japán időseknél (Nakanojo Study) a napi legalább 7000–8000 lépés, illetve 15–20 perc mérsékelt aktivitás összefüggött a szarkopénia-küszöb feletti izomtömeggel; az alacsonyabb aktivitásúaknál 2–4,5-szeres volt a szarkopénia esélye.
-      <span class="ref">Pes, G. M. et al. (2026). Frontiers in Aging. https://doi.org/10.3389/fragi.2026.1951042, Park, H. et al. (2010). European Journal of Applied Physiology. https://doi.org/10.1007/s00421-010-1424-8</span>
+    <div class="pubmed-box">
+        <strong>Kutatási háttér:</strong> Egy 2026-os demográfiai elemzés a szardíniai Bolotana hegyi falujában azt találta, hogy a 70 éves nők esetében a 100 éves kor elérésének valószínűsége 13,8%, szemben az olaszországi ~3,5%-kal. A kutatók a meredek terepen végzett napi gyaloglást a hosszú élet egyik fontos környezeti tényezőjének tekintik. Japán időseknél (Nakanojo Study) a napi legalább 7000–8000 lépés, illetve 15–20 perc mérsékelt aktivitás összefüggött a szarkopénia-küszöb feletti izomtömeggel; az alacsonyabb aktivitásúaknál 2–4,5-szeres volt a szarkopénia esélye.
+        <br><a href="https://doi.org/10.3389/fragi.2026.1951042" target="_blank" rel="noopener">Pes, G. M. et al. (2026). Frontiers in Aging.</a> ;
+        <a href="https://doi.org/10.1007/s00421-010-1424-8" target="_blank" rel="noopener">Park, H. et al. (2010). European Journal of Applied Physiology.</a>
     </div>
     <p>A természetes prevencióban a mozgás célja nem a maximális terhelés, hanem az, hogy <strong>a test ne épüljön le</strong>. A napi, ismétlődő, mérsékelt aktivitás hosszú távon többet ér, mint a ritka, intenzív edzés.</p>
 
     <h2>Alvás: a cirkadián ritmus és a műszakos munka</h2>
-    <p>Az emberi szervezet biológiai órája évmilliók alatt a nappali aktivitásra és éjszakai pihenésre hangolódott. A <span class="highlight">műszakos munka, különösen az éjszakai műszak</span>, tartósan eltolja ezt a ritmust, és a szervezet számos rendszerében okozhat eltéréseket. Egy 2024-es szisztematikus áttekintés, amely 14 tanulmányt elemzett, következetesen összefüggést talált a műszakos munka és a kardiovaszkuláris problémák – szívinfarktus, koszorúér-betegség, magas vérnyomás, érelmeszesedés – fokozott kockázata között.</p>
+    <p>Az emberi szervezet biológiai órája évmilliók alatt a nappali aktivitásra és éjszakai pihenésre hangolódott. A <span class="highlight">műszakos munka, különösen az éjszakai műszak</span> tartósan eltolja ezt a ritmust, és a szervezet számos rendszerében okozhat eltéréseket. Egy 2024-es szisztematikus áttekintés, amely 14 tanulmányt elemzett, következetesen összefüggést talált a műszakos munka és a kardiovaszkuláris problémák – szívinfarktus, koszorúér-betegség, magas vérnyomás, érelmeszesedés – fokozott kockázata között.</p>
 
-    <div class="study-box">
-      <strong>Kutatási háttér:</strong> A review szerint a cirkadián ritmus zavara, a nem megfelelő táplálkozás, valamint az emocionális és fiziológiai stressz együttesen járul hozzá a megemelkedett kockázathoz. Az oxidatív károsodás és a gyulladásos markerek szintén szerepet játszhatnak.
-      <span class="ref">Hanif, A. et al. (2024). Cureus, 16(10), e71003. DOI: 10.7759/cureus.71003</span>
+    <div class="pubmed-box">
+        <strong>Kutatási háttér:</strong> A review szerint a cirkadián ritmus zavara, a nem megfelelő táplálkozás, valamint az emocionális és fiziológiai stressz együttesen járul hozzá a megemelkedett kockázathoz. Az oxidatív károsodás és a gyulladásos markerek szintén szerepet játszhatnak.
+        <br><a href="https://doi.org/10.7759/cureus.71003" target="_blank" rel="noopener">Hanif, A. et al. (2024). Cureus, 16(10), e71003.</a>
     </div>
     <p>Az alvásminőség tehát nem luxuskérdés: a <strong>rendszeres, a biológiai ritmussal összhangban lévő alvás</strong> az egészség fenntartásának alapfeltétele.</p>
 
     <h2>Stressz: a krónikus terhelés biológiai ára</h2>
     <p>A rövid távú stressz természetes és hasznos lehet. A <span class="highlight">krónikus stressz</span> azonban az úgynevezett allosztatikus terhelés (allostatic load) révén tartósan igénybe veszi a szervezetet. A hipotalamusz–hipofízis–mellékvese tengely túlaktiválódása hormonális szabályozási zavarokhoz, fokozott gyulladáshoz és hosszú távon akár neurológiai károsodáshoz vezethet.</p>
 
-    <div class="study-box">
-      <strong>Kutatási háttér:</strong> Egy 2022-es neuroscience áttekintés rámutat, hogy a krónikus stressz és a krónikus betegségek (köztük a mentális zavarok) kapcsolata jól megalapozott: a HPA-tengely hiperaktivitása allosztatikus túlterheléshez, majd klinikai tünetekhez vezet. Ugyanakkor a reziliencia – a stresszel való megküzdés képessége – tanulható és erősíthető.
-      <span class="ref">Johnson, S. (2022). Yale Journal of Biology and Medicine, 95(1), 165–170.</span>
+    <div class="pubmed-box">
+        <strong>Kutatási háttér:</strong> Egy 2022-es neuroscience áttekintés rámutat, hogy a krónikus stressz és a krónikus betegségek (köztük a mentális zavarok) kapcsolata jól megalapozott: a HPA-tengely hiperaktivitása allosztatikus túlterheléshez, majd klinikai tünetekhez vezet. Ugyanakkor a reziliencia – a stresszel való megküzdés képessége – tanulható és erősíthető.
+        <br><a href="https://pubmed.ncbi.nlm.nih.gov/35370440/" target="_blank" rel="noopener">Johnson, S. (2022). Yale Journal of Biology and Medicine, 95(1), 165–170.</a>
     </div>
     <p>A stresszkezelés tehát nem „soft” tényező: <strong>a krónikus stressz biológiai lenyomata</strong> mérhető a hormonális és gyulladásos markerekben, és hosszú távon meghatározza az egészségpályát.</p>
 
     <h2>Összefoglalás: az életmód epigenetikai dimenziója</h2>
     <p>Egy 2021-es áttekintő tanulmány szerint az életmód – a táplálkozás, a fizikai aktivitás, az alvás és a stresszkezelés – <strong>közvetlenül befolyásolja az epigenetikai mechanizmusokat</strong>, beleértve a DNS-metilációt, a hiszton-acetilációt és a miRNA-kifejeződést. A szerzők kiemelik, hogy a helytelen táplálkozás, a mozgásszegény életmód, a krónikus stressz és a műszakos munka mind olyan tényezők, amelyek módosíthatják a génexpressziót, és hozzájárulhatnak az öregedéssel összefüggő betegségek kialakulásához.</p>
 
-    <div class="study-box">
-      <strong>Kutatási háttér:</strong> A review következtetése szerint a teljes életpályán át tartó egészséges életmód – rostokban, vitaminokban gazdag táplálkozás, megfelelő fizikai aktivitás és alvás, dohányzásról való leszokás, stresszkontroll – hasznos eszköz lehet az epigenetikai változások megelőzésében, amelyek károsítják a kardiovaszkuláris funkciót.
-      <span class="ref">Gharipour, M. et al. (2021). International Journal of Molecular Sciences, 22(18), 9949. DOI: 10.3390/ijms22189949</span>
+    <div class="pubmed-box">
+        <strong>Kutatási háttér:</strong> A review következtetése szerint a teljes életpályán át tartó egészséges életmód – rostokban, vitaminokban gazdag táplálkozás, megfelelő fizikai aktivitás és alvás, dohányzásról való leszokás, stresszkontroll – hasznos eszköz lehet az epigenetikai változások megelőzésében, amelyek károsítják a kardiovaszkuláris funkciót.
+        <br><a href="https://doi.org/10.3390/ijms22189949" target="_blank" rel="noopener">Gharipour, M. et al. (2021). International Journal of Molecular Sciences, 22(18), 9949.</a>
     </div>
     <p>Az életmód tehát <strong>nem passzív háttér</strong>, hanem aktív, biológiailag mérhető hatású tényező. A döntéseink – hogy mit eszünk, mennyit mozgunk, hogyan alszunk, és hogyan kezeljük a stresszt – hosszú távon génjeink kifejeződésében is nyomot hagynak.</p>
 
-    <div class="footer-note">
-      Ez az oldal általános ismeretterjesztő célt szolgál, és nem helyettesíti a szakorvosi tanácsadást.
-    </div>
-  </div>
+    <footer>
+        <p>Az oldal az életmód és az egészség biológiai összefüggéseinek ismeretterjesztő összefoglalója. Az egészségügyi döntések előtt konzultálj szakemberrel.</p>
+    </footer>
+
 </body>
 </html>
