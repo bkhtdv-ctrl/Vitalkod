@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Élelmiszerek – Jogi Megtévesztés, Biztonság és Otthoni Feldolgozás | VitalKód</title>
-    <meta name="description" content="Hogyan téveszti meg a jogi megfogalmazás a fogyasztót? Táplálékkiegészítők, fitoterápiás készítmények, HACCP, élelmiszer-biztonsági előírások és otthoni feldolgozás – tudományos és jogi háttérrel.">
+    <meta name="description" content="Tápanyag-összetételre vonatkozó állítások a 1924/2006/EK rendelet melléklete alapján, a jogi megtévesztés, étrend-kiegészítők, fitoterápia, HACCP és otthoni élelmiszer-biztonság témáival.">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,6 +95,48 @@
         .home-safety ul { margin: 10px 0 0 20px; }
         .home-safety li { margin-bottom: 6px; }
 
+        /* ---- Állítások táblázata ---- */
+        .claims-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.92em;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .claims-table thead {
+            background: #1a5276;
+            color: #fff;
+        }
+        .claims-table th {
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .claims-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        .claims-table tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+        .claims-table tr:last-child td { border-bottom: none; }
+        .claims-table td:first-child {
+            font-weight: 600;
+            color: #1a5276;
+            width: 32%;
+        }
+        .claims-table .source-note {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-top: 8px;
+            display: block;
+        }
+
         footer {
             margin-top: 40px;
             font-size: 0.85em;
@@ -105,6 +147,9 @@
         }
         @media (max-width: 600px) {
             .menu a { margin-right: 10px; font-size: 0.9em; }
+            .claims-table { font-size: 0.82em; }
+            .claims-table th, .claims-table td { padding: 8px 10px; }
+            .claims-table td:first-child { width: 38%; }
         }
     </style>
 </head>
@@ -128,29 +173,137 @@
 
     <h2>1. A jogi megfogalmazás csapdája: mit enged a szabályozás?</h2>
 
-    <p>Az élelmiszerekre vonatkozó állításokat uniós szinten az <strong>1924/2006/EK rendelet</strong> szabályozza. A rendelet értelmében tápanyag-összetételre és egészségre vonatkozó állítás csak akkor alkalmazható, ha az szerepel az engedélyezett állítások listáján, és megfelel a tudományos bizonyítékokon alapuló feltételeknek [citation:1][citation:9]. A <strong>432/2012/EU rendelet</strong> tartalmazza az engedélyezett egészségre vonatkozó állítások jegyzékét – például hogy egy adott tápanyag milyen feltételekkel és milyen megfogalmazásban szerepelhet a csomagoláson [citation:11][citation:15].</p>
+    <p>Az élelmiszerekre vonatkozó állításokat uniós szinten az <strong>1924/2006/EK rendelet</strong> szabályozza. A rendelet értelmében tápanyag-összetételre és egészségre vonatkozó állítás csak akkor alkalmazható, ha az szerepel az engedélyezett állítások listáján, és megfelel a tudományos bizonyítékokon alapuló feltételeknek . A <strong>432/2012/EU rendelet</strong> tartalmazza az engedélyezett egészségre vonatkozó állítások jegyzékét – például hogy egy adott tápanyag milyen feltételekkel és milyen megfogalmazásban szerepelhet a csomagoláson .</p>
 
-    <p>A fogyasztók tájékoztatásáról szóló <strong>1169/2011/EU rendelet</strong> pedig általános elveket fektet le: tilos a fogyasztó megtévesztésére alkalmas információ, és tilos az élelmiszernek gyógyító hatást tulajdonítani [citation:10].</p>
+    <p>A fogyasztók tájékoztatásáról szóló <strong>1169/2011/EU rendelet</strong> pedig általános elveket fektet le: tilos a fogyasztó megtévesztésére alkalmas információ, és tilos az élelmiszernek gyógyító hatást tulajdonítani .</p>
 
     <p>A probléma abban rejlik, hogy <span class="highlight">ami jogilag megengedett, az nem feltétlenül etikus</span>. Egy étrend-kiegészítő például jogszerűen állíthatja, hogy „hozzájárul a normál energia-anyagcseréhez” – ez engedélyezett állítás –, miközben a fogyasztó ezt könnyen úgy értelmezheti, hogy a termék „felgyorsítja az anyagcserét és segít a fogyásban”. A jogi szöveg nem hazudik, de a mögöttes üzenet félrevezető lehet.</p>
 
     <div class="legal-box">
-        <strong>Jogi háttér:</strong> Az 1924/2006/EK rendelet 2. cikke szerint „egészségre vonatkozó állítás” minden olyan állítás, amely egy élelmiszer és az egészség között kapcsolatot sugall. A rendelet 10. cikke értelmében egészségre vonatkozó állítás csak akkor alkalmazható, ha azt a Bizottság engedélyezte és szerepel az engedélyezett listán [citation:1][citation:11].
+        <strong>Jogi háttér:</strong> Az 1924/2006/EK rendelet 2. cikke szerint „egészségre vonatkozó állítás” minden olyan állítás, amely egy élelmiszer és az egészség között kapcsolatot sugall. A rendelet 10. cikke értelmében egészségre vonatkozó állítás csak akkor alkalmazható, ha azt a Bizottság engedélyezte és szerepel az engedélyezett listán .
     </div>
 
-    <h2>2. Táplálékkiegészítők: a „bizalmi termék” csapdája</h2>
+    <h2>2. Tápanyag-összetételre vonatkozó állítások – a 1924/2006/EK rendelet melléklete alapján</h2>
 
-    <p>Az étrend-kiegészítők jogilag <strong>élelmiszernek</strong> minősülnek, nem gyógyszernek. Ez alapvető különbség: a gyógyszerekkel ellentétben az étrend-kiegészítők hatásosságát a hatóságok <span class="highlight">nem ellenőrzik</span> a forgalomba hozatal előtt. Ezért nevezik őket „bizalmi termékeknek” – a fogyasztó előre nem ismeri a tényleges hatást, és kénytelen megbízni a gyártó állításaiban [citation:4][citation:8].</p>
+    <p>Az alábbi táblázat a rendelet mellékletében szereplő, tápanyag-összetételre vonatkozó állításokat és azok pontos feltételeit tartalmazza. Ezek azok a kifejezések, amelyeket a gyártók jogszerűen használhatnak a csomagoláson – de csak akkor, ha a termék megfelel az adott mennyiségi feltételnek.</p>
 
-    <p>Az ügyészség több esetben is fellépett olyan vállalkozásokkal szemben, amelyek étrend-kiegészítőket betegségek kezelésére vagy gyógyítására alkalmas termékként reklámoztak. Az egyik esetben egy fogyást segítő terméknél a vállalkozás „10 nap alatt 5–10 kg fogyást” ígért, és orvos ajánlására hivatkozott – mindkettő jogsértő volt [citation:4]. Egy másik esetben cukorbetegség és inzulinrezisztencia kezelésére ajánlottak étrend-kiegészítőt, ami szintén tilos, mivel élelmiszernek nem tulajdonítható betegséget megelőző vagy gyógyító hatás [citation:8].</p>
+    <table class="claims-table">
+        <thead>
+            <tr>
+                <th>Állítás</th>
+                <th>Feltétel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Energiaszegény</td>
+                <td>Energiatartalom legfeljebb 40 kcal (170 kJ) / 100 g szilárd élelmiszer esetén, vagy legfeljebb 20 kcal (80 kJ) / 100 ml folyadék esetén.</td>
+            </tr>
+            <tr>
+                <td>Csökkentett energiatartalmú</td>
+                <td>Energiaérték legalább 30%-kal alacsonyabb egy hasonló termékhez képest, és a csökkentés oka feltüntetésre kerül.</td>
+            </tr>
+            <tr>
+                <td>Zsírszegény</td>
+                <td>Zsírtartalom legfeljebb 3 g / 100 g szilárd élelmiszer esetén, legfeljebb 1,5 g / 100 ml folyadék esetén; félzsíros tej esetében legfeljebb 1,8 g / 100 ml.</td>
+            </tr>
+            <tr>
+                <td>Zsírmentes</td>
+                <td>Zsírtartalom legfeljebb 0,5 g / 100 g vagy 0,5 g / 100 ml.</td>
+            </tr>
+            <tr>
+                <td>Telített zsírban szegény</td>
+                <td>Telített zsírsavak és transzzsírsavak együttes mennyisége legfeljebb 1,5 g / 100 g szilárd élelmiszer esetén, legfeljebb 0,75 g / 100 ml folyadék esetén, és az energia legfeljebb 10%-a származik ezekből.</td>
+            </tr>
+            <tr>
+                <td>Telített zsírtól mentes</td>
+                <td>Telített zsírsavak és transzzsírsavak együttes mennyisége legfeljebb 0,1 g / 100 g vagy 0,1 g / 100 ml.</td>
+            </tr>
+            <tr>
+                <td>Alacsony cukortartalmú</td>
+                <td>Cukortartalom legfeljebb 5 g / 100 g szilárd élelmiszer esetén, legfeljebb 2,5 g / 100 ml folyadék esetén.</td>
+            </tr>
+            <tr>
+                <td>Cukormentes</td>
+                <td>Cukortartalom legfeljebb 0,5 g / 100 g vagy 0,5 g / 100 ml.</td>
+            </tr>
+            <tr>
+                <td>Hozzáadott cukrot nem tartalmaz</td>
+                <td>A gyártás során nem adtak hozzá mono- vagy diszacharidokat, illetve édesítő hatásuk miatt alkalmazott élelmiszereket. Ha az élelmiszer természetes módon tartalmaz cukrokat, a jelölésen szerepelnie kell: „Természetes módon előforduló cukrokat tartalmaz.”</td>
+            </tr>
+            <tr>
+                <td>Nátriumszegény vagy sószegény</td>
+                <td>Nátriumtartalom legfeljebb 0,12 g / 100 g vagy 100 ml, illetve ennek megfelelő sómennyiség.</td>
+            </tr>
+            <tr>
+                <td>Kifejezetten nátriumszegény vagy sószegény</td>
+                <td>Nátriumtartalom legfeljebb 0,04 g / 100 g vagy 100 ml, illetve ennek megfelelő sómennyiség.</td>
+            </tr>
+            <tr>
+                <td>Nátriummentes vagy sómentes</td>
+                <td>Nátriumtartalom legfeljebb 0,005 g / 100 g vagy 100 ml, illetve ennek megfelelő sómennyiség.</td>
+            </tr>
+            <tr>
+                <td>Élelmirost-forrás</td>
+                <td>Legalább 3 g élelmi rost 100 g-onként, vagy 1,5 g élelmi rost 100 kcal-onként.</td>
+            </tr>
+            <tr>
+                <td>Élelmi rostban gazdag</td>
+                <td>Legalább 6 g élelmi rost 100 g-onként, vagy 3 g élelmi rost 100 kcal-onként.</td>
+            </tr>
+            <tr>
+                <td>Fehérjeforrás</td>
+                <td>Az energiaérték legalább 12%-a fehérjéből származik.</td>
+            </tr>
+            <tr>
+                <td>Fehérjében gazdag</td>
+                <td>Az energiaérték legalább 20%-a fehérjéből származik.</td>
+            </tr>
+            <tr>
+                <td>Vitamin- és/vagy ásványianyag-forrás</td>
+                <td>A vonatkozó uniós szabályozás szerint jelentős mennyiségben tartalmazza az adott vitamint vagy ásványi anyagot.</td>
+            </tr>
+            <tr>
+                <td>Vitaminban és/vagy ásványi anyagban gazdag</td>
+                <td>Legalább kétszer akkora mennyiségben tartalmazza az adott vitamint vagy ásványi anyagot, mint amennyi a „forrás” állításhoz szükséges.</td>
+            </tr>
+            <tr>
+                <td>[Tápanyag neve]-t tartalmaz</td>
+                <td>Az adott tápanyagból vagy egyéb anyagból a jogszabály által előírt mennyiséget tartalmazza.</td>
+            </tr>
+            <tr>
+                <td>Megnövelt [tápanyag]-tartalom</td>
+                <td>A tápanyag mennyisége legalább 30%-kal magasabb egy hasonló termékhez képest.</td>
+            </tr>
+            <tr>
+                <td>Csökkentett [tápanyag]-tartalom</td>
+                <td>A tápanyag mennyisége legalább 30%-kal alacsonyabb egy hasonló termékhez képest.</td>
+            </tr>
+            <tr>
+                <td>Light / Lite</td>
+                <td>Megfelel a „csökkentett” állítás feltételeinek, és a csökkentés alapjául szolgáló jellemzőt külön fel kell tüntetni.</td>
+            </tr>
+            <tr>
+                <td>Természetesen</td>
+                <td>A „természetesen” vagy „természetes” előtag használható, ha az élelmiszer természetes állapotában megfelel valamely tápanyag-összetételre vonatkozó állítás feltételeinek.</td>
+            </tr>
+        </tbody>
+    </table>
+    <span class="source-note">Forrás: 1924/2006/EK rendelet melléklete; OGYÉI és EUR-Lex összefoglalók.</span>
+
+    <h2>3. Táplálékkiegészítők: a „bizalmi termék” csapdája</h2>
+
+    <p>Az étrend-kiegészítők jogilag <strong>élelmiszernek</strong> minősülnek, nem gyógyszernek. Ez alapvető különbség: a gyógyszerekkel ellentétben az étrend-kiegészítők hatásosságát a hatóságok <span class="highlight">nem ellenőrzik</span> a forgalomba hozatal előtt. Ezért nevezik őket „bizalmi termékeknek” – a fogyasztó előre nem ismeri a tényleges hatást, és kénytelen megbízni a gyártó állításaiban .</p>
+
+    <p>Az ügyészség több esetben is fellépett olyan vállalkozásokkal szemben, amelyek étrend-kiegészítőket betegségek kezelésére vagy gyógyítására alkalmas termékként reklámoztak. Az egyik esetben egy fogyást segítő terméknél a vállalkozás „10 nap alatt 5–10 kg fogyást” ígért, és orvos ajánlására hivatkozott – mindkettő jogsértő volt . Egy másik esetben cukorbetegség és inzulinrezisztencia kezelésére ajánlottak étrend-kiegészítőt, ami szintén tilos, mivel élelmiszernek nem tulajdonítható betegséget megelőző vagy gyógyító hatás .</p>
 
     <div class="warning-box">
         <h3>Figyelmeztető jelek a reklámokban</h3>
-        <p>Az NKFH tapasztalatai szerint a megtévesztő étrend-kiegészítő reklámok gyakran használnak egészségügyi szakembereknek tulajdonított ajánlásokat, ismert személyek képmását, előtte–utána fotókat, gyors és jelentős fogyást ígérő állításokat, valamint sürgető üzeneteket (időkorlátos kedvezmény, korlátozott készlet) [citation:12].</p>
-        <p>Fontos: az étrend-kiegészítő nem gyógyszer, és nem helyettesíti az orvos által előírt kezelést. A „természetes” vagy „100% növényi alapú” jelzés nem jelent automatikus biztonságot – egyes növényi összetevők kölcsönhatásba léphetnek gyógyszerekkel [citation:12].</p>
+        <p>Az NKFH tapasztalatai szerint a megtévesztő étrend-kiegészítő reklámok gyakran használnak egészségügyi szakembereknek tulajdonított ajánlásokat, ismert személyek képmását, előtte–utána fotókat, gyors és jelentős fogyást ígérő állításokat, valamint sürgető üzeneteket (időkorlátos kedvezmény, korlátozott készlet) .</p>
+        <p>Fontos: az étrend-kiegészítő nem gyógyszer, és nem helyettesíti az orvos által előírt kezelést. A „természetes” vagy „100% növényi alapú” jelzés nem jelent automatikus biztonságot – egyes növényi összetevők kölcsönhatásba léphetnek gyógyszerekkel .</p>
     </div>
 
-    <h2>3. Fitoterápiás készítmények: a besorolás kérdése</h2>
+    <h2>4. Fitoterápiás készítmények: a besorolás kérdése</h2>
 
     <p>A fitoterápiás készítmények – növényi alapú termékek – jogi megítélése összetett. Attól függően, hogy milyen állításokat tesznek rájuk, és milyen formában kerülnek forgalomba, lehetnek <strong>élelmiszerek</strong> (beleértve az étrend-kiegészítőket) vagy <strong>gyógyszerek</strong>. A határvonalat elsősorban a megfogalmazott állítások és a termék bemutatása határozza meg.</p>
 
@@ -158,9 +311,9 @@
 
     <p>A gyakorlatban a fitoterápiás termékek forgalmazói gyakran <span class="highlight">élelmiszer-jelöléssel viszik piacra</span> termékeiket, miközben a marketingkommunikációban a gyógyszeres hatás határát súrolják. Ez a jogi szürkezóna a fogyasztó számára különösen megtévesztő lehet.</p>
 
-    <h2>4. HACCP: a biztonság rendszere</h2>
+    <h2>5. HACCP: a biztonság rendszere</h2>
 
-    <p>A HACCP (Hazard Analysis and Critical Control Points – Veszélyelemzés és Kritikus Szabályozási Pontok) egy nemzetközileg elismert élelmiszer-biztonsági rendszer, amelyet a <strong>852/2004/EK rendelet</strong> tesz kötelezővé az élelmiszer-ipari vállalkozások számára [citation:16][citation:22]. A HACCP lényege, hogy a gyártási folyamat minden lépésénél azonosítja a lehetséges veszélyeket (mikrobiológiai, kémiai, fizikai), és meghatározza azokat a kritikus pontokat, ahol ezeket ellenőrizni kell.</p>
+    <p>A HACCP (Hazard Analysis and Critical Control Points – Veszélyelemzés és Kritikus Szabályozási Pontok) egy nemzetközileg elismert élelmiszer-biztonsági rendszer, amelyet a <strong>852/2004/EK rendelet</strong> tesz kötelezővé az élelmiszer-ipari vállalkozások számára . A HACCP lényege, hogy a gyártási folyamat minden lépésénél azonosítja a lehetséges veszélyeket (mikrobiológiai, kémiai, fizikai), és meghatározza azokat a kritikus pontokat, ahol ezeket ellenőrizni kell.</p>
 
     <div class="haccp-box">
         <h3>A HACCP hét alapelve</h3>
@@ -171,33 +324,33 @@
             <li>Ellenőrzési eljárások kialakítása a CCP-k monitorozására.</li>
             <li>Korrekciós intézkedések meghatározása, ha a határértéket túllépik.</li>
             <li>Ellenőrzési eljárások annak igazolására, hogy a HACCP-rendszer működik.</li>
-            <li>Dokumentáció és nyilvántartás vezetése [citation:16].</li>
+            <li>Dokumentáció és nyilvántartás vezetése .</li>
         </ol>
     </div>
 
-    <p>A HACCP nemcsak nagyüzemekre vonatkozik: a kistermelőknek és az otthoni élelmiszer-feldolgozóknak is ki kell építeniük a saját rendszerüket, még ha egyszerűbb formában is. A kistermelői HACCP-rendszer kialakításának lépései közé tartozik a feldolgozóhely meghatározása, a munkacszközök átvizsgálása, a munkafolyamatok leírása, a szennyeződés-megelőzés átgondolása és a hulladékkezelés megoldása [citation:18].</p>
+    <p>A HACCP nemcsak nagyüzemekre vonatkozik: a kistermelőknek és az otthoni élelmiszer-feldolgozóknak is ki kell építeniük a saját rendszerüket, még ha egyszerűbb formában is. A kistermelői HACCP-rendszer kialakításának lépései közé tartozik a feldolgozóhely meghatározása, a munkacszközök átvizsgálása, a munkafolyamatok leírása, a szennyeződés-megelőzés átgondolása és a hulladékkezelés megoldása .</p>
 
-    <h2>5. Élelmiszer-biztonsági előírások és otthoni feldolgozás</h2>
+    <h2>6. Élelmiszer-biztonsági előírások és otthoni feldolgozás</h2>
 
     <p>Az élelmiszer-biztonság nem ér véget a gyárkapunál. Az otthoni feldolgozás és tárolás során is számos előírást és bevált gyakorlatot kell követni. A NÉBIH (Nemzeti Élelmiszerlánc-biztonsági Hivatal) tájékoztatója szerint a legfontosabb szabályok a következők:</p>
 
     <div class="home-safety">
         <h3>Otthoni élelmiszer-biztonság – kulcspontok</h3>
         <ul>
-            <li><strong>Hűtési lánc:</strong> A húst és tejet 5 °C alatt kell tárolni. A hűtőszekrényben a nyers húst és a készételeket el kell különíteni – a nyers hús ne kerüljön a készételek fölé vagy mellé, mert a lecsepegő lé szennyezheti azokat [citation:24].</li>
-            <li><strong>Keresztszennyeződés elkerülése:</strong> A nyers hús szeleteléséhez használt kést és vágódeszkát nem szabad a kész ételekhez használni. A nyers baromfival, hússal, tojással való érintkezés után alapos kézmosás szükséges [citation:24].</li>
-            <li><strong>Alapos hőkezelés:</strong> A húst és a fasírtot át kell sütni/főzni, hogy az esetleges kórokozók (pl. szalmonella, kampilobakter) elpusztuljanak [citation:24].</li>
-            <li><strong>Tiszta konyha:</strong> A nyersanyagok tisztítására, szeletelésére használt eszközöket más célra, különösen kész ételekhez nem szabad használni [citation:24].</li>
+            <li><strong>Hűtési lánc:</strong> A húst és tejet 5 °C alatt kell tárolni. A hűtőszekrényben a nyers húst és a készételeket el kell különíteni – a nyers hús ne kerüljön a készételek fölé vagy mellé, mert a lecsepegő lé szennyezheti azokat .</li>
+            <li><strong>Keresztszennyeződés elkerülése:</strong> A nyers hús szeleteléséhez használt kést és vágódeszkát nem szabad a kész ételekhez használni. A nyers baromfival, hússal, tojással való érintkezés után alapos kézmosás szükséges .</li>
+            <li><strong>Alapos hőkezelés:</strong> A húst és a fasírtot át kell sütni/főzni, hogy az esetleges kórokozók (pl. szalmonella, kampilobakter) elpusztuljanak .</li>
+            <li><strong>Tiszta konyha:</strong> A nyersanyagok tisztítására, szeletelésére használt eszközöket más célra, különösen kész ételekhez nem szabad használni .</li>
         </ul>
     </div>
 
-    <p>A kistermelőkre vonatkozó szabályok szerint az élelmiszer-előállításhoz legalább egy erre a célra elkülönített helyiség szükséges (időbeni elkülönítés mellett a lakás része is használható), a helyiségeket és eszközöket tisztítani és szükség szerint fertőtleníteni kell, és csak ivóvíz minőségű víz használható [citation:21][citation:30].</p>
+    <p>A kistermelőkre vonatkozó szabályok szerint az élelmiszer-előállításhoz legalább egy erre a célra elkülönített helyiség szükséges (időbeni elkülönítés mellett a lakás része is használható), a helyiségeket és eszközöket tisztítani és szükség szerint fertőtleníteni kell, és csak ivóvíz minőségű víz használható .</p>
 
-    <h2>6. Összefoglalás: mit tehet a fogyasztó?</h2>
+    <h2>7. Összefoglalás: mit tehet a fogyasztó?</h2>
 
     <p>Az élelmiszerekkel kapcsolatos jogi szabályozás alapvetően védi a fogyasztót – de nem mindenható. A megtévesztés gyakran a jogilag megengedett állítások és a mögöttes üzenet közötti résben történik. A tudatos fogyasztó számára a legfontosabb eszközök:</p>
 
-    <p><strong>Olvasd el a címkét, és értsd is, mit jelent.</strong> Az engedélyezett állítások listája nyilvános, és az étrend-kiegészítők hatásossága nem ellenőrzött – ez nem azt jelenti, hogy minden termék hatástalan, de azt igen, hogy a bizonyítékok szintje eltér a gyógyszerekétől.</p>
+    <p><strong>Olvasd el a címkét, és értsd is, mit jelent.</strong> A fenti táblázat segít eligazodni a tápanyag-összetételre vonatkozó állítások között – ezek pontos mennyiségi feltételekhez kötöttek, nem szabadon értelmezhető marketingkifejezések.</p>
 
     <p><strong>Kérdezz rá a jogi besorolásra.</strong> Ha egy növényi készítményt gyógyhatással reklámoznak, az vagy jogellenes, vagy a termék valójában gyógyszerként lenne forgalmazható – de akkor a gyógyszerforgalmazás szabályai vonatkoznak rá.</p>
 
