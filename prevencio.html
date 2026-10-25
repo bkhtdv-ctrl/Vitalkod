@@ -1,221 +1,202 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitalkod - Egészség - prevenció</title>
-    <meta name="description" content="Egészség megőrzése, természetes módszerekkel.">
-    <meta name="keywords" content="egészség, health, prevenció, természet, bio, natur, növény, fitoterápia, megelőzés, regeneráció, élet, táplálkozáspszichiátria">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Vitalkod -Egészség és prevenció">
-    <meta property="og:description" content="Ismerd meg önmagad testét, egészségét.">
-    <meta property="og:type" content="website">
-    
-    <style>
-        body {
-            background-color: #eef0ed;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 20px;
-            padding: 0;
-            line-height: 1.6;
-            color: #000000;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #eef0ed;
-            padding: 10px;
-        }
-        a {
-            color: #0000EE;
-        }
-        a:visited {
-            color: #551A8B;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        h1 {
-            font-size: 2em;
-            margin: 0.8em 0 0.3em 0;
-            font-weight: bold;
-        }
-        h2 {
-            font-size: 1.6em;
-            margin: 1.2em 0 0.4em 0;
-            font-weight: bold;
-        }
-        h3 {
-            font-size: 1.3em;
-            margin: 1em 0 0.3em 0;
-            font-weight: bold;
-        }
-        h4 {
-            font-size: 1.1em;
-            margin: 0.8em 0 0.2em 0;
-            font-weight: bold;
-        }
-        p {
-            margin: 0.6em 0;
-        }
-        ul, ol {
-            margin: 0.6em 0;
-            padding-left: 30px;
-        }
-        li {
-            margin: 0.4em 0;
-        }
-        .menu {
-            margin: 15px 0;
-            padding: 10px 0;
-            border-top: 2px solid #888;
-            border-bottom: 2px solid #888;
-        }
-        .menu a {
-            margin-right: 15px;
-            font-weight: bold;
-        }
-        .highlight-box {
-            background-color: #eef0ed;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-left: 5px solid #000;
-        }
-        .ai-section {
-            background-color: #eef0ed;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border: 1px solid #666;
-        }
-        .faq-item {
-            margin: 15px 0;
-            padding: 10px 15px;
-            background-color: #eef0ed;
-        }
-        .faq-item strong {
-            display: block;
-            font-size: 1.1em;
-        }
-        hr {
-            border: 1px solid #888;
-            margin: 25px 0;
-        }
-        .footer {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 2px solid #888;
-            text-align: center;
-            font-size: 0.9em;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Előadások – Táplálkozástudomány és Prevenció | VitalKód</title>
+    <meta name="description" content="Táplálkozástudományi előadások felnőtteknek, gyerekeknek, iskoláknak és közösségeknek. Megoldások a mindennapi egészségtudatos életmód kialakítására – szakmai háttérrel.">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #eef0ed;
+        }
+        h1 {
+            color: #1a5276;
+            border-bottom: 3px solid #48c9b0;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #1e8449;
+            margin-top: 30px;
+            border-left: 5px solid #48c9b0;
+            padding-left: 15px;
+        }
+        h3 { color: #1a5276; margin-top: 20px; }
+        p { text-align: justify; margin-bottom: 15px; }
+        .menu {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-top: 2px solid #888;
+            border-bottom: 2px solid #888;
+            text-align: center;
+        }
+        .menu a {
+            margin-right: 15px;
+            font-weight: bold;
+            color: #0000EE;
+            text-decoration: none;
+        }
+        .menu a:visited { color: #551A8B; }
+        .menu a:hover { text-decoration: underline; }
+        .menu a.active { color: #1e8449; }
+
+        .intro-box {
+            background: #ebf5fb;
+            padding: 18px 25px;
+            border-radius: 8px;
+            border-left: 5px solid #2980b9;
+            margin: 25px 0;
+        }
+
+        .lecture-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 20px 0;
+        }
+        .lecture-item {
+            background: #eafaf1;
+            padding: 18px 22px;
+            border-radius: 8px;
+            border-left: 5px solid #27ae60;
+        }
+        .lecture-item h3 {
+            margin-top: 0;
+            color: #1e8449;
+            font-size: 1.1em;
+        }
+        .lecture-item p {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .lecture-item .audience {
+            display: inline-block;
+            background: #d5f5e3;
+            color: #1e8449;
+            font-size: 0.82em;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .problem-list {
+            background: #fef9e7;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-left: 5px solid #f39c12;
+            margin: 20px 0;
+        }
+        .problem-list li { margin-bottom: 8px; }
+
+        .contact-box {
+            background: #ebf5fb;
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 5px solid #2980b9;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .contact-box h3 { margin-top: 0; color: #1a5276; }
+        .contact-box p { text-align: center; }
+        .contact-box a {
+            color: #1a5276;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact-box a:hover { text-decoration: underline; }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.85em;
+            text-align: center;
+            color: #95a5a6;
+            border-top: 1px solid #d5dbdb;
+            padding-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .lecture-grid { grid-template-columns: 1fr; }
+            .menu a { margin-right: 10px; font-size: 0.9em; }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <!-- Navigáció -->
-    <center><div class="menu">
-        <a href="/index.html">Home</a>
-        <a href="/">Testtudat</a>
-        <a href="/">Anyagcsere</a>
-        <a href="/eltmod.html">Életmód</a>
-        <a href="/">Fitoterápia</a>
-        <a href="/taplalkozas.html">Táplálkozás</a>
-        <a href="/">Táplálkozáspszichiátria</a>
-        <a href="https://www.youtube.com/@termeszetamiareszed" target="_blank">YouTube</a>
-    </div></center>
-    <!-- Cím és bevezető -->
-    <center><h1>Egészség prevenciója</h1></center>
-    <p><center>A regeneráció tökéletesítése</center><br><br><strong>Ismerd meg a tested. Működj együtt vele, segítsd.</strong></p>
-    <p>Az étkezés nem csupán arról szól, hogy mit eszünk. A bevitt tápanyagok részt vesznek a szervezet energiatermelésében, az anyagcsere-folyamatokban, a hormonális szabályozásban és az idegrendszer működésében is. Ezek a folyamatok hatással vannak a testi és a mentális állapotunkra egyaránt.
-<br>A Vitalkód célja, hogy közérthetően mutassa be ezeket az összefüggéseket, és segítsen eligazodni a táplálkozással, az életmóddal és a természetes egészségmegőrzéssel kapcsolatos ismeretek között.</p><br>
-<br>
-<div style="display: flex; align-items: flex-start; gap: 20px; max-width: 700px; font-family: Georgia, serif; color: #2b2b2b; line-height: 1.6;">
-  <!-- 150x150 kép helye -->
-  <img src="https://www.noilelektitkai.hu/kepek/1791283811091.png" alt="Mogyorósi Diána" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; flex-shrink: 0;">
-  <!-- Szöveg -->
-  <div style="font-size: 15px;">
-    <p style="font-size: 17px; font-weight: bold; color: #4a6741; margin-top: 0;">
-      VEDD vissza az irányítást!
-    </p>
-    <p>
-      <strong>Mogyorósi Diána</strong> vagyok, táplálkozástudományi mesterképzés hallgatója a Semmelweis Egyetemen.
-    </p>
-    <p>
-Van egy alap diplomám. Agrármérnökként végeztem növénynemesítésből és növénybiotechnológiából, ami talán elsőre távolinak tűnik a táplálkozástól. A növények biológiájától indultam, és jutottam el oda, hogy a táplálkozás nem csupán tápanyagok listája, hanem a test és a lélek párbeszéde.
-</p>
-    <p>
-      Az egyetemi tanulmányaim mellett folyamatosan képzem magam: tudományos publikációkat dolgozok fel, fitoterápiás ismeretanyagokat sajátítok el, mert hiszem, hogy a táplálkozás tudománya nem áll meg a tankönyveknél.
-    </p>
-    <p>
-      A célom, hogy érthetően, gyakorlatiasan és empátiával adjam át mindazt, amit a táplálkozásról és a táplálkozáspszichiátriáról tudok. Ezzel segítve a táplálkozásod tudatos kontrolljának kialakítását.
-    </p>
-    <p>
-      Célom a prevenció, tudatosság és fenntarthatóság. A táplálkozás nem pusztán arról szól, mit eszel – hanem arról is, hogyan érzed magad közben, és miért nyúlsz ahhoz, amihez nyúlsz.
-    </p>
-    <p style="font-style: italic; color: #4a6741; margin-bottom: 0;">
-      Egy helyes döntés meghozatala, egy nagyobb táplálkozási harc elkerülése sokszor az apró részletekben rejlik.
-    </p>
-  </div>
-</div>
-<a href="https://www.linkedin.com/in/mogyor%C3%B3si-di%C3%A1na-aaa2a7140/"> Elérhetőség </a>
-    <hr>
-    <!-- Amit az emberek kérdeznek -->
-    <h2>Amit a legtöbben kérdeznek</h2>
-    <div class="faq-item">
-        <strong> Mi értelme van a táplálkozástudománynak?</strong>
-        <p>A táplálkozástudomány célja annak megértése, hogy az elfogyasztott ételek és tápanyagok hogyan hatnak az emberi szervezet működésére. Segít feltárni a táplálkozás hatásmechanizmusait, értelmezve a metabolikus folyamatokat, és a szervezet biológiai működését. Tápanyagok építik fel az emberi szervezetet és tartják működésben. Tudományos módszerekkel vizsgálja a táplálkozás és a betegségek közötti kapcsolatokat, így hozzájárul a megelőzéshez és a kezeléshez. Alapot ad az egészségügyi, közétkeztetési és élelmiszeripari ajánlások kialakításához. Végső soron azt kutatja, hogyan lehet a táplálkozást az ember biológiai szükségleteihez a lehető legjobban igazítani.</p>
-    </div>
-    <div class="ai-section">
-        <h3 style="margin-top:0;">Áttekintés</h3>
-        <ul>
-            <li><strong>Kérdés:</strong> Mi az a táplálkozáspszichiátria?</li>
-            <li><strong>Válasz:</strong> A táplálkozáspszichiátria (nutritional psychiatry) a táplálkozás, az agyműködés és a mentális egészség kapcsolatát vizsgáló interdiszciplináris kutatási terület. Azt tanulmányozza, hogyan függhet össze az étrend és a tápanyagellátottság a hangulattal, a kognitív működéssel és a mentális zavarok kialakulásának kockázatával, illetve kezelésével. A kutatások többek között az étrend minőségét, a bélmikrobiomot, az immunrendszert és az anyagcsere-folyamatokat vizsgálják. Kiemelt kérdés, hogy ezek a tényezők milyen biológiai mechanizmusokon keresztül kapcsolódhatnak az agy működéséhez és a mentális egészséghez. </li>
-            <li><strong>Kulcsfogalmak:</strong> prevenció, egészség, mentális egészség, fizikai egészség, regeneráció</li>
-            <li><strong>Alapelv:</strong>Test - lélek egyensúlya</li>
-            <li><strong>Gyakorlati haszon:</strong> A táplálkozáspszichiátria célja annak feltárása, hogy a megfelelő táplálkozás miként támogathatja a mentális egészséget, és milyen szerepet kaphat a mentális problémák megelőzésében és kezelésében. A táplálkozási beavatkozások ugyanakkor nem helyettesítik a szükséges pszichoterápiát vagy pszichiátriai kezelést; alkalmazásuk lehetőségeit a tudományos bizonyítékok alapján kell megítélni.</li>
-        </ul>
-    </div>
-    <div class="faq-item">
-        <strong>Hogyan segít a táplálkozáspszichiátria a mindennapokban?</strong>
-        <p>A táplálkozáspszichiátria segít megérteni, hogy a stressz, a digitális túlterhelés, az alváshiány és a mindennapi mentális terhelések hogyan befolyásolják étkezési szokásainkat. Vizsgálja, hogy bizonyos tápanyagok, élelmiszerek és étkezési mintázatok miként támogathatják a koncentrációt, a hangulatot és a pszichés ellenállóképességet. Segít felismerni az érzelmi evés, a jutalmazó evés és más automatikus viselkedési minták hátterét. Tudományos alapot nyújt ahhoz, hogy a táplálkozást a mentális egészség támogatásának egyik eszközeként használjuk. A mindennapokban hozzájárulhat a kiegyensúlyozottabb közérzethez, a jobb stresszkezeléshez és az egészségesebb életmód kialakításához.</p>
-    </div>
-    <div class="faq-item">
-        <strong>Energia gazdag táplálkozás, jutalmazó evés</strong>
-        <p>Egyre nagyobb problémát jelent az emberek számára a mindennapokban. A modern életmód következtében egyre gyakoribbá válik a krónikus stressz, az alváshiány, a figyelmi túlterhelés és az érzelmi kimerültség. Ezek a hatások fokozhatják a jutalmazó evést, a túlfogyasztást és az energia-gazdag élelmiszerek iránti vágyat. Az így kialakuló táplálkozási mintázatok hozzájárulhatnak az elhízás, az anyagcsere-zavarok, valamint a szív- és érrendszeri betegségek kockázatának növekedéséhez. A kedvezőtlen étrendi szokások a bélmikrobiom összetételét és a hormonális szabályozást is befolyásolhatják, tovább erősítve a negatív folyamatokat.</p>
-    </div>
-    <div class="faq-item">
-        <strong>Mégis hogyan tud a szervezet alkalmazkodni ezekhez a hatásokhoz?</strong>
-        <p>Ez egy ördögi kör. A mai társadalomban a megélhetéshez szükséges pénzkeresés felborítja az emberi szervezet természetes biológiai ciklusait. Ha csak a stresszt vesszük figyelembe, már az is jelentős terhelést jelent, azonban ennél jóval nagyobb problémakörök is léteznek. Ezek a mechanizmusok olyan mértékű torzulást okozhatnak, hogy a szervezet bizonyos működései tartósan felborulnak. A szervezet a homeosztázis fenntartása érdekében a teljes kimerülésig hajszolja a szerveket.
-Ezért az enyhítő intézkedések mellett szükség van olyan kontrollmechanizmusok kialakítására is, amelyek a biológiai ciklusok fenntartását szolgálják. Ezek a mechanizmusok vagy utánozzák a természetes folyamatokat, vagy segítik az egészséges homeosztázis helyreállítását és fenntartását a kibillent rendszerekben.</p>
-    </div>
-    <hr>
-    <!-- Mit ad ez neked -->
-    <h2> Mit ad ez neked?</h2>
-    <ul>
-        <li><strong>Prevenció:</strong> Egészséges szokások.</li>
-        <li><strong>Érzelmi egyensúly:</strong> Felismered a mentális egészséghez kapcsolódó folyamatokat.</li>
-        <li><strong>Döntéstámogatás:</strong> Segít abban, hogy a helytelen tápanyagforrásokat beazonosítsd.</li>
-        <li><strong>Egészség:</strong> Megoldást ad a számodra a mindennapokban.</li>
-        <li><strong>Fejlődés:</strong> Megtanulod a regenerációs folyamatokra hatással lenni.</li>
-    </ul>
-    <div class="highlight-box">
-        <h3 style="margin-top:0;"> Hogyan működik?</h3>
-        <p>Az oldal a tudomány által igazolt ismeretekre támaszkodva nyújt gyakorlati eszközöket. Olyan összefüggéseket magyaráz el, amelyek valóban az emberi egészséghez kapcsolódnak, és amelyek tudományosan megalapozott, valós kutatási eredményekre épülnek.
-Tudatosan mellőzzük a gazdasági érdekeltség által finanszírozott kutatásokat és az azokhoz kapcsolódó üzeneteket – legyen szó akár a dohány-, akár a kávéiparhoz köthető tevékenységekről. Ezen az oldalon ezeknek nincs helye.
-Csodatermékek nem léteznek. Ha az anyagcsere nem működik megfelelően, hiába juttatunk a szervezetbe további tápanyagokat: azok nem tudnak megfelelően felszívódni, így érdemi hatást sem képesek kifejteni. Ha a folyamat ennyire egyszerű lenne, nem lennének beteg emberek.</p>
-    </div>
-    <hr>
-    <!-- Hasznos források -->
-    <h2> Hasznos források</h2>
-    <ul>
-        <li><strong>Tudatalatti réteg-rendszer:</strong> <a href="https://www.youtube.com/@noilelektitkai7827" target="_blank">Asztrológia csatorna</a> – előrejelzések, értelmezések</li>
-        <li><strong>Táplálkozási csatorna:</strong> <a href="https://www.youtube.com/@termeszetamiareszed" target="_blank">Természet, ami a részed</a> – testi-lelki egészség</li>
-    </ul>
-    <!-- Lábléc -->
-    <div class="footer">
-        <p>© 2009–2026 vitalkod.hu</p>
-        <p>egészség · táplálkozás · mentális egészség· tanácsadás · táplálkozás</p>
-    </div>
-</div>
+
+    <div class="menu">
+        <a href="/index.html">Home</a>
+        <a href="/prevencio.html" class="active">Természetes prevenció</a>
+        <a href="/">Testtudat</a>
+        <a href="/">Anyagcsere</a>
+        <a href="/">Fitoterápia</a>
+        <a href="/taplalkozas.html">Táplálkozás</a>
+        <a href="/">Táplálkozáspszichiátria</a>
+        <a href="https://www.youtube.com/@termeszetamiareszed" target="_blank">YouTube</a>
+    </div>
+
+    <h1>Előadások: Táplálkozástudomány és Prevenció</h1>
+
+    <div class="intro-box">
+        <p>Táplálkozástudományi szakemberként olyan előadásokat tartok, amelyek a mindennapi életben is használható megoldásokat adnak – felnőtteknek, gyerekeknek, iskoláknak és közösségeknek. Az előadások tudományos háttérrel, de közérthetően mutatják be, hogyan alakítható ki fenntartható egészségtudatos életmód.</p>
+    </div>
+
+    <h2>Milyen problémákra adok megoldást?</h2>
+    <ul class="problem-list">
+        <li>Hogyan lehet étkezési ritmust kialakítani anélkül, hogy kalóriát kellene számolni?</li>
+        <li>Miért nem működik a „diéta + edzés + akaraterő” formula, és mi a helyes sorrend?</li>
+        <li>Hogyan tanítható meg a gyerekeknek az egészségtudatos életmód – hibáztatás nélkül?</li>
+        <li>Milyen eszközökkel kezelhető a stressz úgy, hogy az a mindennapokba is beépüljön?</li>
+        <li>Hogyan adható át a tudás a családnak, a közösségnek, az iskolának?</li>
+    </ul>
+
+    <h2>Előadásaim</h2>
+    <div class="lecture-grid">
+        <div class="lecture-item">
+            <h3>A szokás anatómiája</h3>
+            <p>Hogyan építhető ki fenntartható étkezési és regenerációs ritmus – döntési teher nélkül. A résztvevők konkrét, otthon is alkalmazható szabályokat visznek haza.</p>
+            <span class="audience">Felnőttek</span>
+        </div>
+        <div class="lecture-item">
+            <h3>Prevenció gyerekeknek</h3>
+            <p>Életkori sajátosságokhoz igazított, játékos és érthető előadás arról, miért fontos az étkezés, a mozgás és az alvás – anélkül, hogy bárkit hibáztatnánk.</p>
+            <span class="audience">Gyerekek · Iskolák</span>
+        </div>
+        <div class="lecture-item">
+            <h3>Stressz és mentális egészség</h3>
+            <p>Bizonyítottan hatékony technikák a stresszkezelésre és a reziliencia erősítésére – beépíthető módon, nem külön „programként”.</p>
+            <span class="audience">Felnőttek · Közösségek</span>
+        </div>
+        <div class="lecture-item">
+            <h3>Táplálkozástudomány közérthetően</h3>
+            <p>Mit mond valóban a tudomány az étrendről, a vitaminokról, a feldolgozott élelmiszerekről – a divatok és tévhitek mögé nézve.</p>
+            <span class="audience">Felnőttek · Szakemberek</span>
+        </div>
+        <div class="lecture-item">
+            <h3>Szülőknek: példa és átadás</h3>
+            <p>Hogyan adják át a szülők a gyerekeiknek az egészségtudatos szemléletet – a saját példájukon keresztül, hibáztatás nélkül.</p>
+            <span class="audience">Szülők</span>
+        </div>
+        <div class="lecture-item">
+            <h3>Testreszabott előadás</h3>
+            <p>Az intézmény, a korosztály és a célcsoport igényeihez igazított téma és mélység – egyeztetés alapján.</p>
+            <span class="audience">Minden célcsoport</span>
+        </div>
+    </div>
+
+    <h2>Hogyan kérhető előadás?</h2>
+    <div class="contact-box">
+        <h3>Kapcsolat</h3>
+        <p>Előadás kéréséhez, egyeztetéshez keresd a lenti elérhetőségeket. Az előadások díjazása egyedi megállapodás alapján történik.</p>
+        <p><a href="mailto:info@vitalkod.hu">info@vitalkod.hu</a></p>
+    </div>
+
+    <footer>
+        <p>Az oldal a táplálkozástudományi előadások bemutatását szolgálja. Az egészségügyi döntések előtt konzultálj szakemberrel.</p>
+    </footer>
+
 </body>
 </html>
